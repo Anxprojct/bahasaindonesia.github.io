@@ -1,129 +1,160 @@
-/* ==========================================
-Copyright University of Auckland 2004
-Copyright 2004-2007 eXe Project, New Zealand Tertiary Education Commission
-Created by Brent Simpson, brent@exelearning.org
-============================================= */
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Created using eXe: http://exelearning.org -->
+<head>
+  <style type="text/css">
+    body {
+      margin: 0px;
+    }
 
-body {
-   margin: 0px;
-}
+    #header {
+      text-align: left;
+      color: #4D4D4D;
+      background-color: #E0DFD8;
+      height: 100px;
+      padding-left: 20px;
+      font-size: 2.2em;
+      font-weight: bold;
+    }
 
-#header {
-    text-align: left;
-    color: #4D4D4D;
-    background-color: #E0DFD8;
-    height: 100px;
-    padding-left: 20px;
-    font-size: 2.2em;
-    font-weight: bold;
-}
+    /* LEFT-HAND NAVIGATION */
 
-/* LEFT-HAND NAVIGATION */
+    #navcontainer {
+      z-index: 1000;
+      width: 250px;
+      height: 100%;
+      /* the holly hack for IE! */
+      float: left;
+      margin-top: 0px;
+      padding-top: 60px;
+      text-align: left;
+      position: fixed;
+      background-color: transparent;
+    }
 
-#navcontainer {
-   z-index:1000;
-   width: 250px;
-   height: 100%; /* the holly hack for IE! */
-   float: left;
-   margin-top: 0px;
-   padding-top: 60px;
-   text-align:left;
-   position:absolute;
-   background-color:transparent;
-}
+    #navcontainer ul {
+      margin-left: 10px;
+      padding-left: 0;
+      margin-top: 0;
+      list-style-type: none;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
+    #navcontainer a {
+      /* sections not active */
+      display: block;
+      padding: 4px 0 4px 18px;
+      background-color: #FFF;
+      border-bottom: 1px solid #ffffff;
+      width: 195px;
+      border-top: 1px solid #ffffff;
+      color: #4d4d4d;
+      text-decoration: none;
+    }
 
-#navcontainer ul {
-margin-left: 10px;
-padding-left: 0;
-margin-top: 0;
-list-style-type: none;
-font-family: Arial, Helvetica, sans-serif;
-}
+    #navcontainer a:hover {
+      color: #4d4d4d;
+      background-color: #c7c5b9;
+    }
 
-#navcontainer a {  /* sections not active */
-display: block;
-padding: 4px 0 4px 18px;
-background-color: #FFF;
-border-bottom: 1px solid #ffffff;
-width: 195px;
-border-top: 1px solid #ffffff;
-}
+    div#active {
+      padding: 0px 0px 3px 18px;
+      width: 195px !important;
+      /* the Housley Hack for Firefox... */
+      width: 209px;
+      /* for IE */
+      background-color: #706F61;
+      color: #ffffff;
+      border-bottom: 1px solid #fff;
+      border-top: 6px solid #706f61;
+    }
 
-#navcontainer a:link,
-#navlist a:visited {
-color: #4d4d4d;
-background-color: #E0DFD8;
-text-decoration: none;
-}
+    #subnav a {
+      /* subnav when parent is selected */
+      display: block;
+      border: 0 !important;
+      width: 187px;
+      margin-left: 10px;
+      padding: 4px 0 4px 16px;
+    }
 
-#navcontainer a:hover {
-color: #4d4d4d;
-background-color:#c7c5b9;
-}
+    #subnav a:hover {
+      color: #4d4d4d;
+      background-color: #C7C5B9;
+    }
 
-/* Hide from IE5-mac. Only IE-win sees this. Fixes the peek-a-boo bug!!! */
-* html #navcontainer {
-margin-right: 10px;
-}
+    #subnav #active {
+      /* subnav selected */
+      display: block;
+      margin-left: 10px;
+      width: 187px !important;
+      /* the Housley Hack for Firefox... */
+      width: 201px;
+      /* for IE */
+      padding: 4px 0 4px 16px;
+      color: #ffffff;
+      font-size: 11px;
+      background-color: #706F61;
+      border-top: 2px solid #706f61;
+    }
 
-* html p {
-height: 1%;
-margin-left: 0;
-}
-/* End hide from IE5/mac */
+    /* MAIN CONTENT STYLES */
 
-div #active {
-padding: 0px 0px 3px 18px;
-width: 195px !important; /* the Housley Hack for Firefox... */
-width: 209px; /* for IE */
-background-color: #706F61;
-color: #ffffff;
-border-bottom: 1px solid #fff;
-border-top: 6px solid #706f61;
-background-image:url(active_bg.gif);
-background-position: -2px 2px;
-background-repeat:no-repeat;
-}
+    #container {
+      border-top: 0px solid #CCC;
+    }
 
-#subnav a { /* subnav when parent is selected */
-display: block;
-border: 0 !important;
-width: 187px;
-margin-left: 10px;
-padding: 4px 0 4px 16px;
-}
-
-#subnav a:hover {
-color: #4d4d4d;
-background-color: #C7C5B9;
-}	
-
-#subnav #active { /* subnav selected */
-display: block;
-margin-left: 10px;
-width: 187px !important; /* the Housley Hack for Firefox... */
-width: 201px; /* for IE */
-padding: 4px 0 4px 16px;
-color: #ffffff;
-font-size:11px;
-background-color: #706F61;
-background-image:url(active_bg.gif);
-background-position:-2px 2px;
-background-repeat:no-repeat;
-border-top: 2px solid #706f61;
-}	
-
-/* MAIN CONTENT STYLES */
-
-#container {
-border-top: 0px solid #CCC;
-}
-
-#main {
-margin-left: 260px;
-margin-top: 0px;
-width: 68%;
-position: absolute;
-text-align:left;
-}
+    #main {
+      margin-left: 260px;
+      margin-top: 0px;
+      width: 68%;
+      position: absolute;
+      text-align: left;
+    }
+  </style>
+  <title>Sapaan</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="text/javascript" src="common.js"></script>
+</head>
+<body>
+  <div id="header">
+    <h1>Sapaan</h1>
+  </div>
+  <div id="navcontainer">
+    <ul id="navlist">
+      <li><a href="index.html" class="withChild">MKDU4110 BAHASA INDONESIA</a></li>
+      <li id="active" class="withoutChild">Sapaan</li>
+      <li><a href="soal_1_10.html" class="withoutChild">Soal 1-10</a></li>
+      <li><a href="soal_1120.html" class="withoutChild">Soal 11-20</a></li>
+      <li><a href="soal_2130.html" class="withoutChild">Soal 21-30</a></li>
+      <li><a href="soal_3140.html" class="withoutChild">Soal 31-40</a></li>
+      <li><a href="soal_4150.html" class="withoutChild">Soal 41-50</a></li>
+      <li><a href="soal_5154.html" class="withoutChild">Soal 51-54</a></li>
+    </ul>
+  </div>
+  <div id="main">
+    <div id="nodeDecoration">
+      <p id="nodeTitle">Sapaan</p>
+    </div>
+    <div class="iDevice emphasis0">
+      <div id="ta57_1" class="block" style="display:block">
+        <p>
+          <font size="2">
+            <b>Apa kabar mahasiswa UT di seluruh penjuru Tanah Air, selamat berjumpa lewat Latihan Mandiri (LM) online. Apakah Anda sudah mempelajari Buku Materi Pokok (BMP)? Bila sudah, Anda dapat langsung mengerjakan LM mata kuliah tersebut. LM ini dimaksudkan untuk membantu Anda mengetahui keberhasilan atau kemajuan belajar Anda setelah mempelajari satu BMP penuh dan untuk menyiapkan diri dalam menghadapi Ujian Akhir Semester (UAS). Naskah LM ini sudah dilengkapi <i>hint</i> yang berisi rambu-rambu untuk menyelesaikan setiap butir soal serta <i>feedback </i>yang berisi penjelasan untuk setiap <i>option</i> benar maupun salah.</b>
+          </font>
+        </p>
+        <p>&nbsp;</p>
+        <p><b>Petunjuk mengerjakan soal.</b></p>
+        <p><b>Pilihlah salah satu jawaban yang benar dengan mengklik salah dari A, B, C, atau D.</b></p>
+        <p><b>&nbsp;</b></p>
+        <p><b>Selamat mengerjakan! </b></p>
+        <font size="2">
+          <b></b>
+        </font>
+      </div>
+    </div>
+    <div class="noprt" align="right"><a href="index.html">&laquo; Previous</a> | <a href="soal_1_10.html">Next &raquo;</a></div>
+  </div>
+</body>
+</html>
