@@ -3,79 +3,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <!-- Created using eXe: http://exelearning.org -->
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="base.css" />
+  <link rel="stylesheet" type="text/css" href="content.css" />
+  <link rel="stylesheet" type="text/css" href="nav.css" />
   <title>Sapaan</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="text/javascript" src="common.js"></script>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-    }
-
-    #content {
-      display: flex;
-      flex-direction: row;
-    }
-
-    #navcontainer {
-      width: 250px;
-      background-color: #E0DFD8;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    #navlist {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    #navlist li {
-      margin-bottom: 10px;
-    }
-
-    #navlist a {
-      display: block;
-      padding: 10px;
-      background-color: #FFF;
-      color: #4D4D4D;
-      text-decoration: none;
-      border: 1px solid #FFFFFF;
-      border-top: none;
-    }
-
-    #navlist a:hover {
-      background-color: #C7C5B9;
-    }
-
-    #navlist #active {
-      background-color: #706F61;
-      color: #FFFFFF;
-    }
-
-    #main {
-      flex-grow: 1;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    #nodeTitle {
-      font-size: 18px;
-      font-weight: bold;
-      margin: 0;
-    }
-
-    .block {
-      margin-bottom: 20px;
-    }
-
-    .noprt {
-      text-align: right;
-      margin-top: 20px;
+    @media only screen and (max-width: 424px) {
+      /* Styles for Xperia XZ-1 or similar-sized screens */
+      #navcontainer {
+        width: 100%;
+        position: static;
+      }
+      #main {
+        margin-left: 0;
+        width: 100%;
+      }
     }
   </style>
-  <script type="text/javascript" src="common.js"></script>
 </head>
 <body>
   <div id="content">
@@ -93,29 +39,30 @@
     </div>
     <div id="main">
       <div id="nodeDecoration">
-        <h1 id="nodeTitle">Sapaan</h1>
+        <p id="nodeTitle">Sapaan</p>
       </div>
       <div class="iDevice emphasis0">
-        <div id="ta57_1" class="block">
+        <div id="ta57_1" class="block" style="display:block">
           <p>
-            Apa kabar mahasiswa UT di seluruh penjuru Tanah Air, selamat berjumpa lewat Latihan Mandiri (LM) online. Apakah Anda sudah mempelajari Buku Materi Pokok (BMP)? Bila sudah, Anda dapat langsung mengerjakan LM mata kuliah tersebut. LM ini dimaksudkan untuk membantu Anda mengetahui keberhasilan atau kemajuan belajar Anda setelah mempelajari satu BMP penuh dan untuk menyiapkan diri dalam menghadapi Ujian Akhir Semester (UAS). Naskah LM ini sudah dilengkapi <i>hint</i> yang berisi rambu-rambu untuk menyelesaikan setiap butir soal serta <i>feedback </i>yang berisi penjelasan untuk setiap <i>option</i> benar maupun salah.
+            <font size="2"><b>Apa kabar mahasiswa UT di seluruh penjuru Tanah Air, selamat berjumpa lewat Latihan Mandiri (LM) online. Apakah Anda sudah mempelajari Buku Materi Pokok (BMP)? Bila sudah, Anda dapat langsung mengerjakan LM mata kuliah tersebut. LM ini dimaksudkan untuk membantu Anda mengetahui keberhasilan atau kemajuan belajar Anda setelah mempelajari satu BMP penuh dan untuk menyiapkan diri dalam menghadapi Ujian Akhir Semester (UAS). Naskah LM ini sudah dilengkapi <i>hint</i> yang berisi rambu-rambu untuk menyelesaikan setiap butir soal serta <i>feedback </i>yang berisi penjelasan untuk setiap <i>option</i> benar maupun salah.</b></font>
           </p>
           <p>&nbsp;</p>
           <p>
             <b>Petunjuk mengerjakan soal.</b>
           </p>
           <p>
-            Pilihlah salah satu jawaban yang benar dengan mengklik salah dari A, B, C, atau D.
+            <b>Pilihlah salah satu jawaban yang benar dengan mengklik salah dari A, B, C, atau D.</b>
           </p>
           <p>
-            &nbsp;
+            <b>&nbsp;</b>
           </p>
           <p>
-            Selamat mengerjakan!
+            <b>Selamat mengerjakan! </b>
           </p>
+          <font size="2"><b></b></font>
         </div>
       </div>
-      <div class="noprt">
+      <div class="noprt" align="right">
         <a href="index.html">&laquo; Previous</a> | <a href="soal_1_10.html">Next &raquo;</a>
       </div>
     </div>
