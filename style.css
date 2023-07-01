@@ -1,0 +1,69 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#navcontainer {
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+#navlist {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navlist li {
+  display: inline;
+  margin-right: 10px;
+}
+
+#navlist li a {
+  text-decoration: none;
+  padding: 5px;
+  color: #333;
+}
+
+#navlist li a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+#main {
+  margin-top: 20px;
+}
+
+#nodeDecoration {
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+#nodeTitle {
+  margin: 0;
+}
+
+.block {
+  margin-bottom: 20px;
+}
+
+.iDevice {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.emphasis0 {
+  background-color: #f0f0f0;
+}
+
+.noprt {
+  text-align: right;
+  margin-top: 20px;
+}
