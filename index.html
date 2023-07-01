@@ -11,7 +11,7 @@
     @media only screen and (max-width: 424px) {
       /* Styles for Xperia XZ-1 or similar-sized screens */
       #navcontainer {
-        width: 100%;
+        display: none;
       }
       #content {
         padding: 10px;
@@ -28,6 +28,12 @@
       img {
         max-width: 100%;
         height: auto;
+      }
+      .toggle-nav {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        cursor: pointer;
       }
     }
   </style>
@@ -85,5 +91,18 @@
       </div>
     </div>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var navContainer = document.getElementById('navcontainer');
+      var toggleNavButton = document.createElement('div');
+      toggleNavButton.classList.add('toggle-nav');
+      toggleNavButton.innerText = 'Toggle Navigation';
+      toggleNavButton.addEventListener('click', function () {
+        navContainer.style.display = navContainer.style.display === 'none' ? 'block' : 'none';
+      });
+      document.body.insertBefore(toggleNavButton, document.body.firstChild);
+    });
+  </script>
 </body>
 </html>
